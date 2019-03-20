@@ -36,7 +36,9 @@ def naive_impl(pat, txt):
     while i + len(pat) - 1 < len(txt):
         if txt[i:i+len(pat)] == pat:
             result.append(i)
+            assert pat == txt[i:i+len(pat)]
         i+=1
+
     return result
 def check(text, pattern_gen):
     for i,pattern in enumerate(pattern_gen):
@@ -47,9 +49,22 @@ def check(text, pattern_gen):
             print(len(z_result),len(n_result),i, pattern)
             break
     print('all correct')
+def run_z(p, t):
+    match = []
+    concated_t = p+'$'+t
+    z_list = get_z(concated_t)
+    for i in range(len(z_list)):
+        if z_list[i] == len(p):
+            match.append(i-len(p)-1)
+    # print(len(match))
+
+    return match
+
 if __name__ == "__main__":
 
     pattern_path = 'pattern-collection.txt'
     pattern_gen = pattern_generator(pattern_path)
+    p = next(pattern_gen)
     text = read_reference_file()
-    check(text, pattern_gen)
+    print(run_z(p, text))
+    print(naive_impl(p, text))

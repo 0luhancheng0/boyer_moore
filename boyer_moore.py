@@ -66,6 +66,7 @@ def rtl_scan(p, t, j):
         k -=1
     return k
 def boyer_moore(p, t):
+
     match = []
     badchar_table = get_bad_char_table(p)
     goodsuffix, matched_prefix = get_goodsuffix_matchedpf(p)
@@ -81,6 +82,8 @@ def boyer_moore(p, t):
             jump_length = max(bc, gs)
         j += jump_length
         # print(bc,gs)
+        # print(match)
+    # print(len(match))
     return match
 
 def get_zsuffix_matchedprefix(s):
@@ -130,11 +133,12 @@ def check_goodsuffix(pattern_gen = pattern_generator('pattern-collection.txt'), 
             j += jump_length
         assert gs_match==n_match
 
-def check_bm(pattern_gen = pattern_generator('pattern-collection_2.txt'), text=read_reference_file()):
+def check_bm(pattern_gen = pattern_generator('pattern-collection.txt'), text=read_reference_file()):
     t = text
     for p in pattern_gen:
         n_match = naive_impl(p, t)
         bm_match = boyer_moore(p, t)
+        print(len(bm_match))
         assert bm_match==n_match
 
 
