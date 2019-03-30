@@ -36,6 +36,7 @@ def naive_impl(pat, txt):
     while i + len(pat) - 1 < len(txt):
         if txt[i:i+len(pat)] == pat:
             result.append(i)
+            # print(pat, txt[i:i+len(pat)])
             assert pat == txt[i:i+len(pat)]
         i+=1
 
