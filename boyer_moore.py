@@ -2,14 +2,14 @@ from readfile import read_reference_file, pattern_generator
 from z_algo import get_z, naive_impl
 from tqdm import tqdm
 import numpy as np
-def alphabet():
-    return [chr(i) for i in range(65, 91)]
+# def alphabet():
+#     return [chr(i) for i in range(65, 91)]
 def get_bad_char_table(p):
-    N = alphabet()
-    table = np.empty(shape=(len(p), len(N)))
+    N = 128
+    table = np.empty(shape=(len(p), N))
     table[0,:] = None
     for i in range(1, len(p)):
-        n_index = ord(p[i - 1]) - ord('A')
+        n_index = ord(p[i - 1])
         table[i, :] = table[i-1, :]
         table[i, n_index] = i - 1
     return table
@@ -18,7 +18,7 @@ def bad_char(p, t, table, j, k):
     x = t[j+k]
     # print(j+k)
     # return
-    left_index = table[k, ord(x)-ord('A')]
+    left_index = table[k, ord(x)]
     # print(left_index)
     if not np.isnan(left_index):
         return int(k-left_index)
@@ -58,21 +58,32 @@ def check_jumplen(jump_len, p, k):
     if matched_p != shifted_matchp:
         print(matched_p, shifted_matchp, k, jump_len, p)
     # print(matched_p==shifted_matchp)
-def rtl_scan(p, t, j):
+def rtl_scan(p, t, j, prev_mismatch, prev_end):
     k = len(p) - 1
     while k >= 0:
         if t[j+k] != p[k]:
             break
+        if prev_mismatch < j <= prev_end and k == prev_end-j:
+            # print('GALIL')
+            # print(prev_mismatch, j, prev_end)
+            # print(p)
+            #
+            # print(t[:prev_end+1])
+            # print(t[prev_mismatch:prev_mismatch+len(p)])
+            return -1
         k -=1
     return k
 def boyer_moore(p, t):
-
+    mistmatch = 0
+    end =0
     match = []
     badchar_table = get_bad_char_table(p)
     goodsuffix, matched_prefix = get_goodsuffix_matchedpf(p)
     j = 0
     while j <= len(t)-len(p):
-        k = rtl_scan(p, t, j)
+        k = rtl_scan(p, t, j, mistmatch, end)
+        mistmatch = k+j
+        end = j+len(p)-1
         if k == -1:
             match.append(j)
             jump_length = max(1, good_suffix(p, t, j, goodsuffix, matched_prefix, k))
@@ -97,49 +108,52 @@ def get_zsuffix_matchedprefix(s):
     # print(mpf, s)
     return zsuffix, mpf
 
-def check_badchar(pattern_gen = pattern_generator('pattern-collection_2.txt'), text=read_reference_file()):
-    # p = next(pattern_gen)
-    t = text
-    for p in pattern_gen:
-        bc_match = []
-        badchar_table = get_bad_char_table(p)
-        n_match = naive_impl(p, t)
-        j = 0
-        while j <=len(t) - len(p):
-            k = rtl_scan(p, t, j)
-            if k == -1:
-                bc_match.append(j)
-                bc = 1
-            else:
-                bc = bad_char(p, t, badchar_table, j, k)
-            # print(bc)
-            j += bc
-            # print(bc)
-        print(len(n_match), len(bc_match), len(n_match)==len(bc_match))
-def check_goodsuffix(pattern_gen = pattern_generator('pattern-collection.txt'), text=read_reference_file()):
-    t = text
-    for p in pattern_gen:
-        gs_match = []
-        n_match = naive_impl(p, t)
-        goodsuffix, matched_prefix = get_goodsuffix_matchedpf(p)
-        j = 0
+# def check_badchar(pattern_gen = pattern_generator('pattern-collection_2.txt'), text=read_reference_file()):
+#     # p = next(pattern_gen)
+#     t = text
+#     for p in pattern_gen:
+#         bc_match = []
+#         badchar_table = get_bad_char_table(p)
+#         n_match = naive_impl(p, t)
+#         j = 0
+#         while j <=len(t) - len(p):
+#             k = rtl_scan(p, t, j)
+#             if k == -1:
+#                 bc_match.append(j)
+#                 bc = 1
+#             else:
+#                 bc = bad_char(p, t, badchar_table, j, k)
+#             # print(bc)
+#             j += bc
+#             # print(bc)
+#         print(len(n_match), len(bc_match), len(n_match)==len(bc_match))
+# def check_goodsuffix(pattern_gen = pattern_generator('pattern-collection.txt'), text=read_reference_file()):
+#     t = text
+#     for p in pattern_gen:
+#         gs_match = []
+#         n_match = naive_impl(p, t)
+#         goodsuffix, matched_prefix = get_goodsuffix_matchedpf(p)
+#         j = 0
+#
+#         while j <= len(t)-len(p):
+#
+#             k = rtl_scan(p, t, j)
+#             if k == -1:
+#                 gs_match.append(j)
+#             jump_length = good_suffix(p, t, j, goodsuffix, matched_prefix, k)
+#             j += jump_length
+#         assert gs_match==n_match
 
-        while j <= len(t)-len(p):
-
-            k = rtl_scan(p, t, j)
-            if k == -1:
-                gs_match.append(j)
-            jump_length = good_suffix(p, t, j, goodsuffix, matched_prefix, k)
-            j += jump_length
-        assert gs_match==n_match
-
-def check_bm(pattern_gen = pattern_generator('pattern-collection.txt'), text=read_reference_file()):
+def check_bm(pattern_gen = pattern_generator('pattern-collection_2.txt'), text=read_reference_file()):
     t = text
+    counter = 1
     for p in pattern_gen:
+        # if counter == 10:
         n_match = naive_impl(p, t)
         bm_match = boyer_moore(p, t)
-        print(len(bm_match))
+        print(len(bm_match), len(n_match))
         assert bm_match==n_match
+        counter += 1
 
 
 

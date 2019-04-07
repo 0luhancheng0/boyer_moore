@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8d5a519-f017-46f2-b2cb-b3b41fb2ec9c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KMP.py" beforeDir="false" afterPath="$PROJECT_DIR$/KMP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/z_algo.py" beforeDir="false" afterPath="$PROJECT_DIR$/z_algo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boyer_moore.py" beforeDir="false" afterPath="$PROJECT_DIR$/boyer_moore.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="boyer_moore.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="boyer_moore.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/boyer_moore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-305">
-              <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+            <state relative-caret-position="2190">
+              <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -30,7 +29,7 @@
       <file leaf-file-name="comptime.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comptime.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="495">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="z_algo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/z_algo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="1" selection-start-line="1" selection-end-line="30" />
+            <state relative-caret-position="465">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -51,17 +50,17 @@
       <file leaf-file-name="readfile.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="134" selection-start-line="5" selection-start-column="134" selection-end-line="5" selection-end-column="134" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KMP.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KMP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KMP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+            <state relative-caret-position="885">
+              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -87,6 +86,9 @@
       <find>k ==</find>
       <find>naive_i</find>
       <find>print</find>
+      <find>rtl_scan</find>
+      <find>ord</find>
+      <find>chr</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -103,14 +105,14 @@
       <list>
         <option value="$PROJECT_DIR$/Prac03_Supporting_Material-20190314/KMP.py" />
         <option value="$PROJECT_DIR$/readfile.py" />
-        <option value="$PROJECT_DIR$/boyer_moore.py" />
         <option value="$PROJECT_DIR$/comptime.py" />
         <option value="$PROJECT_DIR$/z_algo.py" />
         <option value="$PROJECT_DIR$/KMP.py" />
+        <option value="$PROJECT_DIR$/boyer_moore.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
@@ -122,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,7 +141,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.KMP">
+  <component name="RunManager" selected="Python.boyer_moore">
     <configuration name="KMP" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="prac3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,9 +245,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.boyer_moore" />
         <item itemvalue="Python.KMP" />
         <item itemvalue="Python.comptime" />
-        <item itemvalue="Python.boyer_moore" />
         <item itemvalue="Python.z_algo" />
       </list>
     </recent_temporary>
@@ -276,10 +278,10 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.121212125" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32848486" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32848486" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32848486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -310,7 +312,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="72" />
+      <option name="time" value="74" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -415,6 +417,104 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/KMP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boyer_moore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="133" column="20" lean-forward="true" selection-end-line="159" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comptime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z_algo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KMP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boyer_moore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comptime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KMP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z_algo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/boyer_moore.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
@@ -717,9 +817,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KMP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/comptime.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="495">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
@@ -727,36 +844,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readfile.py">
+    <entry file="file://$PROJECT_DIR$/z_algo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="134" selection-start-line="5" selection-start-column="134" selection-end-line="5" selection-end-column="134" />
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/boyer_moore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+        <state relative-caret-position="2190">
+          <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z_algo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="1" selection-start-line="1" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KMP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
