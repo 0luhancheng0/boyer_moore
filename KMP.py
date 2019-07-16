@@ -55,7 +55,7 @@ if __name__ == '__main__':
     text = read_reference_file()
     # p = next(pattern_gen)
     # kmp(p, text)
-    check(text, pattern_gen)
+    # check(text, pattern_gen)
 
 
     # for p in pattern_gen:

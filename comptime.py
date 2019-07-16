@@ -32,10 +32,10 @@ if __name__ == "__main__":
     ppath = 'pattern-collection.txt'
     text = read_reference_file()
     tz = run_matching(run_z, ppath,text)
-    # tkmp = run_matching(kmp, ppath,text)
+    tkmp = run_matching(kmp, ppath,text)
     tbm = run_matching(boyer_moore, ppath,text)
     print("time for z algo:", tz)
-    # print("time for kmp:", tkmp)
+    print("time for kmp:", tkmp)
     print("time for boyer moore:", tbm)
 
 
